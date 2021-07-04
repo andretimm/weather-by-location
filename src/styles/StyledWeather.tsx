@@ -2,9 +2,13 @@ import styled from "styled-components";
 
 export const StyledWeather = styled.div`
   color: #fff;
+  img {
+    width: 7rem;
+    margin-top: 15px;
+  }
   h1 {
     font-size: 6rem;
-    margin: 30px 0px;
+    margin-bottom: 30px;
     & span {
       font-size: 4.5rem;
       font-weight: 500;

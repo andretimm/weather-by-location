@@ -29,7 +29,7 @@ export default function WeatherContainer() {
   return (
     <StyledWrapper>
       <Location place={currentPlace?.place} />
-      <DisplayWeather weather={weather} />
+      <DisplayWeather locationWeather={weather} />
     </StyledWrapper>
   );
 }

@@ -1,7 +1,7 @@
 export interface WeatherInterface {
   temp: number;
-  todayWeather: {};
-  weatherMain: number;
+  weatherMain: string;
   tempMax: number;
   tempMin: number;
+  icon: string;
 }
