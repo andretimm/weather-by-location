@@ -1,3 +1,4 @@
+import axios from "axios";
 import { CurrentPosition } from "../interfaces/CurrentPosition";
 import { MAPBOX_URL } from "../utils/APIsURL";
 
@@ -26,16 +27,14 @@ async function getPosition() {
 
 async function getCurrentLocationData(position: CurrentPosition) {
   const { latitude, longitude } = position.coords;
-  const URL = `${MAPBOX_URL}${longitude}%2C${latitude}.json?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}&autocomplete=false&types=place`;
-
-  const placeData = await fetch(URL).then((data) => data.json());
-
+  const URL: string = `${MAPBOX_URL}${longitude}%2C${latitude}.json?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}&autocomplete=false&types=place`;
+  let placeResponse: any = await axios.get(URL).then();
   const place: CurrentPosition = {
     ...position,
     place: {
-      country: placeData.features[0].context[1].text,
-      name: placeData.features[0].text,
-      state: placeData.features[0].context[0].text,
+      country: placeResponse.data.features[0].context[1].text,
+      name: placeResponse.data.features[0].text,
+      state: placeResponse.data.features[0].context[0].text,
     },
   };
   return place;
