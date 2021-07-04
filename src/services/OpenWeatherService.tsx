@@ -2,7 +2,10 @@ import axios from "axios";
 import { WeatherInterface } from "../interfaces/WeatherInterface";
 import { OPENWEATHER_URL } from "../utils/APIsURL";
 
-export async function getWeather(latitude: number, longitude: number) {
+export async function getWeather(
+  latitude: number | undefined,
+  longitude: number | undefined
+) {
   const URL: string = `${OPENWEATHER_URL}?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&units=metric&appid=${process.env.REACT_APP_OPENWEATHER_TOKEN}`;
   const openWeatherResponse: any = await axios(URL);
   const weather: WeatherInterface = {

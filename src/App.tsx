@@ -1,9 +1,9 @@
-import Weather from "./components/Weather";
+import WeatherContainer from "./components/WeatherContainer";
 
 function App() {
   return (
     <div>
-      <Weather />
+      <WeatherContainer />
     </div>
   );
 }
