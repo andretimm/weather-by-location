@@ -1,7 +1,6 @@
 import { StyledWeather } from "../styles/StyledWeather";
 
 export default function DisplayWeather(weather: any) {
-  console.log(weather);
   return (
     <StyledWeather>
       <img src={weather?.locationWeather?.icon} alt="" />

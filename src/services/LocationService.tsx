@@ -1,11 +1,20 @@
 import axios from "axios";
-import { CurrentPosition } from "../interfaces/CurrentPosition";
 import { MAPBOX_URL } from "../utils/APIsURL";
+import { CurrentPosition } from "../interfaces/CurrentPosition";
 
 export async function getLocation() {
   const position: CurrentPosition = await getPosition();
   return await getCurrentLocationData(position);
 }
+
+export async function getNavigatorPermission() {
+  return new Promise<boolean>((resolve) => {
+    navigator.permissions.query({ name: "geolocation" }).then((result) => {
+      resolve(result.state === "granted");
+    });
+  });
+}
+
 async function getPosition() {
   return new Promise<CurrentPosition>((resolve) =>
     navigator.geolocation.getCurrentPosition(function (data) {
