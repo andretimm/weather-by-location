@@ -2,7 +2,8 @@
 
 Desenvolvido com `ReactJS`, Weather mostra como esta o clima na sua região.
 
-![App](images/main.png?raw=true "App")
+![clear](https://user-images.githubusercontent.com/8572757/124406806-b45ed700-dd18-11eb-9aff-c449c1700241.PNG)
+
 
 # Setup
 
@@ -28,11 +29,12 @@ Você precisa configurar o arquivo `.env` com as chaves das APIs como variáveis
 
 <div align="center">
 
-![App1](images/clear.png?raw=true "App")
+![drizzle](https://user-images.githubusercontent.com/8572757/124406813-bd4fa880-dd18-11eb-8aa2-f8f87b9f1f53.PNG)
+  
+![main](https://user-images.githubusercontent.com/8572757/124406817-c17bc600-dd18-11eb-9186-b80ba541f0c3.PNG)
+  
+![clear](https://user-images.githubusercontent.com/8572757/124406818-c3458980-dd18-11eb-8346-d4d52bb6905b.PNG)
 
-![App2](images/drizzle.png?raw=true "App")
-
-![App3](images/drizzle.png?raw=true "App")
 
 </div>
 
