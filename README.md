@@ -1,8 +1,9 @@
+
 # Weather App
 
 Desenvolvido com `ReactJS`, Weather mostra como esta o clima na sua região.
 
-<img src="images/main.png" width="600" alt="App"/>
+![Uploading main.PNG…]()
 
 # Setup
 
